@@ -1,0 +1,45 @@
+ 
+
+ <div id="main" role="main">
+      <!div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span6">
+              <table class="table span3 small_title">
+				<tr>	
+					<% q = 0 %>					 
+					<% @cursos.each do |curso| %>
+					 		
+						<%if q == 3 %>
+							</tr>
+							<tr>
+								<td><%= link_to(image_tag(curso.image_url),'http://www.youtube.com/embed/5c9mN-lWSLw?rel=0&autoplay=1') %>
+								<p><br><small><%=curso.release_date.strftime("Data do curso: %d/%m/%Y") %></small></p>
+								<p><small><%=curso.name %></small></p>
+								</td>
+							
+							<% q = 0 %>
+						<%else%>
+							<td><%= link_to(image_tag(curso.image_url),'http://www.youtube.com/embed/5c9mN-lWSLw?rel=0&autoplay=1') %>
+								<p><br><small><%=curso.release_date.strftime("Data do curso: %d/%m/%Y") %></small></p>
+								<p><small><%=curso.name %></small></p>
+							</td>
+							<% q += 1 %>
+						<%end%>
+					<% end %>
+	
+				</tr>	
+
+			  </table>	
+            </div>
+            <div class="span6">
+              <h1>Como Funciona</h1>
+            </div>
+          </div>
+          <footer>
+          </footer>
+        </div>
+      <!/div> <!--! end of .container -->
+    </div> <!--! end of #main -->
+
+
