@@ -12,3 +12,9 @@ puts 'New user created: ' << user.name
 user2 = User.create! :name => 'Second User', :email => 'user2@example.com', :password => 'please', :password_confirmation => 'please'
 user2.confirm!
 puts 'New user created: ' << user2.name
+
+curso = Curso.create(:name => "Login Facebook", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
+curso = Curso.create(:name => "Amazon Web Services", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
+curso = Curso.create(:name => "Curso 3", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
+curso = Curso.create(:name => "Curso 4", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
+curso = Curso.create(:name => "Curso 5", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")

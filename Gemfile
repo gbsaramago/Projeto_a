@@ -5,6 +5,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+gem "letter_opener", :group => :development
 gem 'jquery-rails'
 gem "puma", ">= 1.6.3", :group => :production
 gem "mysql2", ">= 0.3.11"

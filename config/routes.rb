@@ -1,5 +1,5 @@
 Aula::Application.routes.draw do
-	
+get 'detalhe_cursos/show'	
   authenticated :user do
     root :to => 'home#index'
   end
