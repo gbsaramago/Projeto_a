@@ -1,7 +1,67 @@
+<div class="container">
+	<div class="row">
+		<div class="span5">
+			<h2><%= @header_name %></h2>
+			<h4>Por: <%= @header_instructor %></h4>
+			
+			<br>
 
-<video class="sublime" poster="http://media.jilion.com/vcg/ms_800.jpg" width="640" height="360" data-name="Midnight Sun" data-uid="57fb2708" preload="none">
-<source src="http://media.jilion.com/vcg/ms_360p.mp4" />
-<source src="http://media.jilion.com/vcg/ms_720p.mp4" data-quality="hd" />
-<source src="http://media.jilion.com/vcg/ms_360p.webm" />
-<source src="http://media.jilion.com/vcg/ms_720p.webm" data-quality="hd" />
-</video>
+			<div class="tabbable"> 
+			  <ul class="nav nav-pills">
+			    <li class="active"><a href="#tab1" data-toggle="tab">Conteúdo</a></li>
+			    <li><a href="#tab2" data-toggle="tab">Instrutor</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+			      <table class="table table-striped table-condensed table-bordered table-hover">
+				
+				<thead>
+				    <tr>
+				      <th>Índice</th>
+				      <th>Nome</th>
+				      <th>Inicio</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  <% @content.each do |content| %>
+				    <tr>
+				      	<td><%= content.content %></td>
+						<td><%= content.name %></td>
+						<td><%= content.start %></td>
+				    </tr>
+				 <%end%>
+				 </tbody>
+			</table>
+			    </div>
+			    <div class="tab-pane" id="tab2">
+			      <p>Aqui entram informações, foto e etc.</p>
+			    </div>
+			  </div>
+			</div>
+		</div> 		
+		<div class="span7">
+			<div>
+			<video class="sublime" poster="http://media.jilion.com/vcg/ms_800.jpg" width="640" height="360" data-name="Midnight Sun" data-uid="57fb2708" preload="none">
+				<source src="http://media.jilion.com/vcg/ms_360p.mp4" />
+				<source src="http://media.jilion.com/vcg/ms_720p.mp4" data-quality="hd" />
+				<source src="http://media.jilion.com/vcg/ms_360p.webm" />
+				<source src="http://media.jilion.com/vcg/ms_720p.webm" data-quality="hd" />
+			</video>
+		</div>
+		<br>
+			<table class="table table-condensed">
+				<tr>
+					<td>
+						<ul >
+							<li><strong>Lançado/revisado em: </strong><%= @header_release_date.strftime("%d/%m/%Y") %></li></li>					
+						</ul>
+					</td>	
+				</tr>	
+						<ul >
+							<li><strong>Resumo: </strong><p><%= @header_description %></p></li>					
+						</ul>
+			</table>	
+		</div>
+	</div>
+</div> <!--! end of .container -->
+

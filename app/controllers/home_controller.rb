@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    #@users = User.all
-    @cursos = Curso.order("Cursos.name ASC")
+    @cursos = Curso.order("Cursos.id ASC")
   end
 
 end

@@ -18,3 +18,12 @@ curso = Curso.create(:name => "Amazon Web Services", :description => "Como criar
 curso = Curso.create(:name => "Curso 3", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
 curso = Curso.create(:name => "Curso 4", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
 curso = Curso.create(:name => "Curso 5", :description => "Como criar apps no facebook e fdaksflas", :instructor => "Rogerio", :release_date => "01/09/2012", :image_url => "http://files2.lynda.com/files/images/courses/108884_trailer-r.jpg")
+puts "criou 5 cursos"
+
+
+detalhe = DetalheCurso.create(:content => "1", :name => "Introducao", :start => "0", :curso_id => "1")
+detalhe = DetalheCurso.create(:content => "1", :name => "bem-vindo", :start => "0", :curso_id => "1")
+detalhe = DetalheCurso.create(:content => "1", :name => "o que esperar do curso", :start => "0.30", :curso_id => "1")
+puts "criou 3 detalhes"
+
+

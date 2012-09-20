@@ -15,7 +15,7 @@
 <div class="container">
 	<div class="row">
  		<div class="tabbable span8"> <!-- Only required for left/right tabs -->
-		    <ul class="nav nav-tabs">
+		    <ul class="nav nav-pills">
 			    <li class="active"><a href="#tab1" data-toggle="tab">Todos</a></li>
 			    <li><a href="#tab2" data-toggle="tab">Geek</a></li>
 		    </ul>
@@ -23,20 +23,20 @@
 		    	<div class="tab-pane active" id="tab1">
 		    		<div class="row small_title">
 			    		<div class="span4">	
-						<% q = 0 %>					 
+			    		<% q = 0 %>					 
 						<% @cursos.each do |curso| %>
 
 							<%if q == 3 %>
 								</div>
 								<div class="span4">	
-								<td><%= link_to(image_tag(curso.image_url),'http://www.youtube.com/embed/5c9mN-lWSLw?rel=0&autoplay=1') %>
+								<td><%= link_to(image_tag(curso.image_url),{:controller => 'detalhe_cursos', :action => 'show', :curso => curso.id}) %>
 								<p><br><small><%=curso.release_date.strftime("Data do curso: %d/%m/%Y") %></small></p>
 								<p><small><%=curso.name %></small></p>
 								</td>
 
 								<% q = 0 %>
 							<%else%>
-								<td><%= link_to(image_tag(curso.image_url),'http://www.youtube.com/embed/5c9mN-lWSLw?rel=0&autoplay=1') %>
+								<td><%= link_to(image_tag(curso.image_url),{:controller => 'detalhe_cursos', :action => 'show', :curso => curso.id}) %>
 								<p><br><small><%=curso.release_date.strftime("Data do curso: %d/%m/%Y") %></small></p>
 								<p><small><%=curso.name %></small></p>
 								</td>
